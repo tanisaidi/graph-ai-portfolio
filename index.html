@@ -7,13 +7,13 @@
     <style>
         /* CSS Reset & Custom Properties */
         :root {
-            --bg-base: #090c15;
+            --bg-base: #0b0a12;
             --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --glass-bg: rgba(30, 41, 59, 0.4);
-            --glass-border: rgba(255, 255, 255, 0.08);
-            --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
-            --gradient-secondary: linear-gradient(135deg, #10b981 0%, #0ea5e9 100%);
+            --text-muted: #cbd5e1;
+            --glass-bg: rgba(28, 25, 43, 0.45);
+            --glass-border: rgba(236, 72, 153, 0.12);
+            --gradient-primary: linear-gradient(135deg, #a855f7 0%, #ec4899 50%, #f43f5e 100%);
+            --gradient-secondary: linear-gradient(135deg, #2dd4bf 0%, #0ea5e9 100%);
             --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
         }
 
@@ -36,7 +36,7 @@
         .ambient-glow {
             position: fixed;
             border-radius: 50%;
-            filter: blur(100px);
+            filter: blur(120px);
             z-index: -1;
             pointer-events: none;
         }
@@ -46,7 +46,7 @@
             left: -10%;
             width: 50vw;
             height: 50vw;
-            background: rgba(139, 92, 246, 0.15);
+            background: rgba(236, 72, 153, 0.12);
         }
 
         .glow-2 {
@@ -54,13 +54,14 @@
             right: -10%;
             width: 60vw;
             height: 60vw;
-            background: rgba(59, 130, 246, 0.12);
+            background: rgba(168, 85, 247, 0.1);
         }
 
         /* Typography */
         h1, h2, h3, h4 {
             line-height: 1.2;
             font-weight: 700;
+            letter-spacing: -0.02em;
         }
 
         h2 {
@@ -97,7 +98,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: rgba(9, 12, 21, 0.8);
+            background: rgba(11, 10, 18, 0.8);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border-bottom: 1px solid var(--glass-border);
@@ -128,7 +129,7 @@
         }
 
         .nav-links a:hover {
-            color: #f8fafc;
+            color: #fff;
         }
 
         /* Sections Structure */
@@ -170,9 +171,9 @@
         .hero-role {
             display: inline-block;
             padding: 0.5rem 1.5rem;
-            background: rgba(16, 185, 129, 0.1);
-            color: #34d399;
-            border: 1px solid rgba(16, 185, 129, 0.2);
+            background: rgba(45, 212, 191, 0.1);
+            color: #2dd4bf;
+            border: 1px solid rgba(45, 212, 191, 0.2);
             border-radius: 50px;
             font-weight: 600;
             font-size: 0.9rem;
@@ -196,7 +197,7 @@
 
         .btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(139, 92, 246, 0.4);
+            box-shadow: 0 10px 25px rgba(236, 72, 153, 0.35);
         }
 
         /* About Section (Glass Cards) */
@@ -213,12 +214,13 @@
             border: 1px solid var(--glass-border);
             border-radius: 24px;
             padding: 3rem;
-            transition: transform 0.3s ease, border-color 0.3s ease;
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
         }
 
         .glass-card:hover {
             transform: translateY(-5px);
-            border-color: rgba(139, 92, 246, 0.3);
+            border-color: rgba(236, 72, 153, 0.3);
+            box-shadow: 0 10px 30px rgba(236, 72, 153, 0.05);
         }
 
         .glass-card h3 {
@@ -235,9 +237,9 @@
         }
 
         .skill-tag {
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.04);
             color: #e2e8f0;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             padding: 0.5rem 1.2rem;
             border-radius: 50px;
             font-size: 0.85rem;
@@ -246,8 +248,8 @@
         }
 
         .skill-tag:hover {
-            background: rgba(139, 92, 246, 0.2);
-            border-color: rgba(139, 92, 246, 0.5);
+            background: rgba(236, 72, 153, 0.15);
+            border-color: rgba(236, 72, 153, 0.4);
             color: #fff;
         }
 
@@ -278,7 +280,7 @@
             left: 0;
             width: 100%;
             height: 4px;
-            background: var(--gradient-secondary);
+            background: var(--gradient-primary);
             transform: scaleX(0);
             transform-origin: left;
             transition: transform 0.4s ease;
@@ -291,7 +293,7 @@
         .module-num {
             font-size: 4rem;
             font-weight: 900;
-            color: rgba(255, 255, 255, 0.03);
+            color: rgba(236, 72, 153, 0.04);
             position: absolute;
             top: -5px;
             right: 15px;
@@ -338,7 +340,7 @@
             width: 20px;
             height: 20px;
             background: var(--bg-base);
-            border: 4px solid #8b5cf6;
+            border: 4px solid #ec4899;
             border-radius: 50%;
             top: 25px;
             z-index: 2;
@@ -362,7 +364,7 @@
         }
 
         .submission-card:hover {
-            border-color: rgba(139, 92, 246, 0.4);
+            border-color: rgba(236, 72, 153, 0.3);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
 
@@ -378,9 +380,9 @@
         }
 
         .status-active {
-            background: rgba(16, 185, 129, 0.15);
-            color: #34d399;
-            border: 1px solid rgba(16, 185, 129, 0.3);
+            background: rgba(45, 212, 191, 0.15);
+            color: #2dd4bf;
+            border: 1px solid rgba(45, 212, 191, 0.3);
         }
 
         .status-pending {
@@ -393,7 +395,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            color: #8b5cf6;
+            color: #ec4899;
             font-weight: 600;
             font-size: 0.9rem;
             margin-top: 0.5rem;
@@ -405,13 +407,39 @@
             opacity: 0.5;
         }
 
+        /* Consultation Section Styling */
+        .form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 2rem;
+        }
+
+        .form-wrapper {
+            width: 100%;
+            max-width: 700px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 1.5rem;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .form-wrapper iframe {
+            width: 100%;
+            border-radius: 12px;
+            background: transparent;
+        }
+
         /* Footer */
         footer {
             border-top: 1px solid var(--glass-border);
             padding: 4rem 5%;
             text-align: center;
             margin-top: 4rem;
-            background: rgba(9, 12, 21, 0.5);
+            background: rgba(11, 10, 18, 0.6);
         }
 
         .socials {
@@ -491,6 +519,9 @@
             section {
                 padding: 6rem 5% 3rem;
             }
+            .form-wrapper {
+                padding: 0.5rem;
+            }
         }
     </style>
 </head>
@@ -508,6 +539,7 @@
             <li><a href="#about">About</a></li>
             <li><a href="#course">The Course</a></li>
             <li><a href="#submissions">Submissions</a></li>
+            <li><a href="#consultation">Consultation</a></li>
         </ul>
     </nav>
 
@@ -517,7 +549,7 @@
             <div class="hero-role">GIS Specialist @ World Health Organization (WHO)</div>
             <h1 class="hero-title">Tanaka <span class="gradient-text">Saidi</span></h1>
             <p class="hero-subtitle">Bridging Spatial Data, Software Engineering, and AI. <br>Participant in the "Generative AI for Work & Research" Cohort.</p>
-            <a href="#submissions" class="btn">View Submissions</a>
+            <a href="#consultation" class="btn">Book a Consultation</a>
         </div>
     </section>
 
@@ -651,6 +683,16 @@
                 </div>
             </div>
 
+        </div>
+    </section>
+
+    <!-- Consultation Section -->
+    <section id="consultation">
+        <h2><span>Contact for Consultation</span></h2>
+        <div class="form-container fade-in">
+            <div class="form-wrapper">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSexvR1hESn3m1aAQ4pbw0RQXlXiWYtD9Zl1_sg6m7U-8kEsUg/viewform?embedded=true" height="780" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div>
         </div>
     </section>
 
